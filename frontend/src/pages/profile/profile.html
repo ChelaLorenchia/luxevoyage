@@ -1,0 +1,49 @@
+<div ng-controller="ProfileController">
+  <section class="profile-section">
+    <div class="profile-container">
+      <h1>Profile</h1>
+      <div class="profile-info">
+        <!-- Name -->
+        <div class="profile-item">
+          <i class="fa-solid fa-user"></i>
+          <p>Name: {{user.name}}</p>
+        </div>
+
+        <!-- Email -->
+        <div class="profile-item">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Email: {{user.email}}</p>
+        </div>
+
+        <!-- Update Profile -->
+        <div class="profile-item">
+          <i class="fa-solid fa-user-pen"></i>
+          <a ui-sref="update-profile">Update Profile</a>
+        </div>
+
+        <!-- Favorite -->
+        <div class="profile-item">
+          <i class="fa-solid fa-heart"></i>
+          <a ui-sref="favorite">Favorite</a>
+        </div>
+
+        <!-- Your Itinerary -->
+        <div class="profile-item">
+          <i class="fa-solid fa-calendar"></i>
+          <a ui-sref="your-itinerary">Your Itinerary</a>
+        </div>
+
+        <!-- Change Password and Delete Account Buttons -->
+        <div class="buttons">
+          <a ui-sref="change-password" class="btn btn-primary">Change Password</a>
+          <a ng-click="deleteUser(user._id)" class="btn btn-danger">Delete Account</a>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="logout-btn">
+          <a ng-click="logout()" class="btn btn-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
